@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('animals', function() {
+    this.route('new');
+    this.route('edit', {path: ":animal_id"});
+  });
 });
 
 export default Router;
