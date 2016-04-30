@@ -1,22 +1,23 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: WnejFvgvg6HWNAK19r6vXR76m6cRcJdxTBpLLPv55afoHewFCePNlaomwK8cFAZHkRUBLOLhJAy/LDx9dbJoWL54YfZjlT0tye9RlRCQ/kSpvRlf2/G6WL5HYYLR6e2pzo8lSGnLExZ4upiFxhqvsVznVzSyYp8tDfhMy/8tprU2cH7uZfhitmTKQRpmUi/dTBrpi4sVUZ4QaxYuJpfxZRx+lPgSnirpKNgrddiDInGcR/Rn/9p9fg3tWJBiE0ldkqBoDejET2UMzW50y8AD75BaHDB1I9aRusPHSh2OHoB/NDyN+ckxiil6wfoN3K33gV6CoCMOSqjIFjHyGQKgjzZ8F8jBispatlHrqWziReIUXZ/4NpdOHR2lEvx1UYMO/XyhCSP+Qa6/L81JhzeSB8AWOzY1C9ByyrUiD+dfT/Vw20zhw0LOq8gkP7ZIFACz8UOJtCWdcDthe8a/P3oAH29FW5+HIXT6YjBra9pNfMmtT21dcsJpbYy+IlBWsImp3ph//fvShto/46X+/LVXbh6yqt9Tb7XEGzETZi9rUlhcmIl78dc3n0mWXht3xAoGOtuieM7LDZryKvIAYAOlN5YAZdyGYyGPbOnbmqrfoFby8feb/XpzlnwcYxEWXt3POBDunKbvc6H/uLMYNTwfYSbBDGibkzsX5DintV1yA5o=
+  app: fathomless-dusk-45978
+  on:
+    repo: villander/ember-crud-animals
