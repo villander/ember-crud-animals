@@ -5,8 +5,10 @@ moduleForModel('animal', 'Unit | Model | animal', {
   needs: []
 });
 
-test('it exists', function(assert) {
-  let model = this.subject();
-  // let store = this.store();
-  assert.ok(!!model);
+test('it has the attributes: firstName and lastName', function(assert) {
+  const model = this.subject();
+  const hasAttrFirstName = Object.keys(model.toJSON()).indexOf('firstName') > -1;
+  const hasAttrLastName = Object.keys(model.toJSON()).indexOf('lastName') > -1;
+  assert.ok(hasAttrFirstName);
+  assert.ok(hasAttrLastName);
 });
