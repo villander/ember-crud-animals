@@ -1,5 +1,5 @@
 <form {{action 'customAction' on='submit'}}>
-  {{paper-input label="FirstName" value=firstName}}
-  {{paper-input label="LastName" value=lastName}}
-  {{#paper-button raised=true primary=true}}{{buttonName}}{{/paper-button}}
+  {{paper-input id="first-name" label="FirstName" value=firstName}}
+  {{paper-input id="last-name" label="LastName" value=lastName}}
+  {{#paper-button id="create-or-update" raised=true primary=true}}{{buttonName}}{{/paper-button}}
 </form>
