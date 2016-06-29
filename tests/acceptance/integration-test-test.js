@@ -1,5 +1,5 @@
 import { test } from 'qunit';
-import Ember from 'ember'
+//import Ember from 'ember'
 import moduleForAcceptance from 'ember-crud-animals/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | integration test');
@@ -31,7 +31,7 @@ test('flow of to create a new animal', function (assert) {
   click('#create-or-update');
   andThen(function () {
     assert.equal(currentURL(), '/animals');
-    // Ember.run(() => {
+    // Ember.run.scheduleOnce('afterRender', () => {
     //   const animalCreated = find('div.md-list-item-text:eq(2) h2:first').text();
     //   assert.equal(animalCreated, 'Leão');
     // });
