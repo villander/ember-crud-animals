@@ -40,7 +40,7 @@
     "ember-paper": "0.2.14",
     "ember-resolver": "^2.0.3",
     "ember-route-action": "0.0.5",
-    "emberfire": "1.6.6",
+    "emberfire": "git://github.com/firebase/emberfire.git#7277d8336aa3afb82626477b3d1fde52f053da47",
     "loader.js": "^4.0.1"
   }
 }

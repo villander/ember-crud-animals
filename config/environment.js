@@ -6,13 +6,19 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self'",
+      'script-src': "'self' 'unsafe-eval' apis.google.com'",
       'font-src': "'self' http://fonts.gstatic.com",
-      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'frame-src': "'self' https://*.firebaseapp.com'",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com",
       'img-src': "'self' data:",
       'media-src': "'self'"
     },
-    firebase: 'https://animalscrud.firebaseio.com/',
+    firebase: {
+      apiKey: 'uhapd22iLJBrzsfs8pP1BCc0ORasXcCaZdM6XEX2',
+      authDomain: 'https://animalscrud.firebaseapp.com',
+      databaseURL: 'https://animalscrud.firebaseio.com',
+      storageBucket: 'https://animalscrud.appspot.com',
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
