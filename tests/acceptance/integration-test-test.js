@@ -27,10 +27,9 @@ test('flow of to create a new animal', (assert) => {
   fillIn('#first-name', 'Leão');
   fillIn('#last-name', 'Marinho');
   click('#create-or-update');
-
+  shouldHaveRecordSaved(assert);
   andThen(() => {
-    assert.equal(currentURL(), '/animals');
-    const animalCreated = find('div.md-list-item-text:eq(3) h2:first').text();
+    const animalCreated = find('div.mano:eq(3) h2:first').text();
     assert.equal(animalCreated, 'Leão');
   });
 });

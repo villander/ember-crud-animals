@@ -6,10 +6,9 @@ export default Ember.Route.extend({
       const firstName = newAnimal.get('firstName');
       const lastName = newAnimal.get('lastName');
       const animal = this.store.createRecord('animal', { firstName, lastName });
-
-      animal.save()
-        .then(() => {
-          this.transitionTo('animals');
+      return animal.save()
+        .then((animal) => {
+          return this.transitionTo('animals');
         }).catch(() => {
           // something that handles failures
         });

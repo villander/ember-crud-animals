@@ -23,7 +23,7 @@ export default Ember.Component.extend({
        firstName: this.get('firstName'),
        lastName: this.get('lastName'), 
       });
-      this.sendAction('customAction', animal); 
+      this.get('customAction')(animal); 
     }
   }
 });
