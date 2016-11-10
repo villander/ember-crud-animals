@@ -20,13 +20,10 @@ test('flow of to create a new animal', (assert) => {
   visit('/animals');
   click('#new-animal');
 
-  andThen(() => {
-    assert.equal(currentURL(), '/animals/new');
-  });
-
-  fillIn('#first-name', 'Leão');
-  fillIn('#last-name', 'Marinho');
-  click('#create-or-update');
+  // andThen(() => {
+  //   assert.equal(currentURL(), '/animals/new');
+  // });
+  
   shouldHaveRecordSaved(assert);
   andThen(() => {
     const animalCreated = find('div.mano:eq(3) h2:first').text();
