@@ -19,6 +19,13 @@ module.exports = function(environment) {
       databaseURL: 'https://animalscrud.firebaseio.com',
       storageBucket: 'https://animalscrud.appspot.com',
     },
+    emberOffline: {
+      themes: {
+        theme: 'default',
+        indicator: false,
+        language: 'english'
+      }
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
