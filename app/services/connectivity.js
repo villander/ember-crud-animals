@@ -6,6 +6,6 @@ export default Ember.Service.extend({
     this.set('connectivity', window.Offline);
   },
   check() {
-    return this.get('offline').check();
+    return this.get('connectivity').check();
   },
 });
